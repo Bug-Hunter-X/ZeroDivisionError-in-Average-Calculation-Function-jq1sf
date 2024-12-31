@@ -1,0 +1,23 @@
+def calculate_average(numbers):
+    if not numbers:
+        return 0  # Handle empty list case
+    total = sum(numbers)
+    average = total / len(numbers)
+    return average
+
+my_numbers = [10, 20, 30, 40, 50]
+result = calculate_average(my_numbers)
+print(f"The average is: {result}")
+
+my_empty_list = []
+result2 = calculate_average(my_empty_list)
+print(f"The average is: {result2}")
+
+#Alternative solution using try-except block
+def calculate_average_try_except(numbers):
+    try:
+        total = sum(numbers)
+        average = total / len(numbers)
+        return average
+    except ZeroDivisionError:
+        return 0
